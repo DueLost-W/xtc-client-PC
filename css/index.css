@@ -1,0 +1,392 @@
+/*首页样式*/
+/*banner*/
+.banner{
+    position: relative;
+    height: 500px;
+}
+.banner .wrapper{
+    position: relative;
+    width: 1240px;
+    height: 500px;
+    background-color: #27ba9b;
+    overflow: hidden;
+}
+.banner .wrapper ul{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 600%; /*有几张图就是多少百分比*/
+}
+.banner .wrapper>ul>li{
+    float: left;
+}
+.banner .wrapper ul li img{
+    width: 1240px;
+    height: 500px;
+    object-fit:cover;
+}
+/*侧导航*/
+.banner .aside{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0,0,0,.6);
+}
+.banner .aside li{
+    line-height: 50px;
+}
+.banner .aside a{
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 50px;
+    padding-left: 36px;
+    padding-right: 20px;
+    color: white;
+}
+.banner .aside a span{
+    font-size: 14px;
+    margin-left: 15px;
+}
+.banner .aside a:hover{
+    background-color: #27ba9b;
+}
+/*伪元素添加箭头*/
+.banner .aside a::after{
+    position: absolute;
+    content: "";
+    right: 6px;
+    top:19px;
+    width:6px;
+    height: 11px;
+    background-image: url("../images/sprites.png");
+    background-position: -80px -110px;
+}
+
+/*箭头*/
+.prev,
+.next{
+    display: none;
+    position: absolute;
+    top:228px;
+    width: 45px;
+    height: 48px;
+    background-color: rgba(0,0,0,.2);
+    border-radius: 50%;
+    background-image: url("../images/sprites.png");
+}
+.prev{
+    left: 260px;
+    background-position: 14px -58px;
+}
+.next{
+    right: 10px;
+    background-position:-22px -58px ;
+}
+
+/*圆点*/
+.banner ol{
+    position: absolute;
+    width:180px;
+    height: 10px;
+    left: 750px;
+    bottom: 30px;
+}
+.banner ol li{
+    float: left;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin-right: 24px;
+    background-color: rgba(255,255,255,0.4);
+    cursor:pointer;
+}
+.banner ol .current{
+    background-color: white;
+    transition: 0.4s;
+}
+
+
+/*新鲜好物*/
+.goods .hd ,
+.brand .hd{
+    height: 114px;
+    line-height: 114px;
+}
+.goods .hd h2,
+.brand .hd h2{
+    float: left;
+    height: 114px;
+    font-size: 29px;
+    font-weight: 400;
+}
+.goods .hd h2 span,
+.brand .hd h2 span{
+    font-size: 16px;
+    color: #999;
+    margin-left: 34px;
+}
+.goods .hd a,
+.shengxian .hd .more{
+    color: #999;
+    float: right;
+}
+.goods .hd a::after,
+.shengxian .hd .more::after,
+.clothes .hd .more::after,
+.kitchen .hd .more::after,
+.home .hd .more::after,
+.topic .hd .more::after{
+    content: '';
+    display: inline-block;
+    margin-left: 13px;
+    width:7px;
+    height:13px;
+    background-image: url("../images/sprites.png");
+    background-position: 0 -110px;
+    vertical-align: middle;
+}
+/*body*/
+.goods .bd li{
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    text-align: center;
+}
+.goods .bd li:last-child{
+    margin-right: 0;
+}
+.goods .bd li img{
+    width: 304px;
+}
+.goods .bd li h3{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.goods .bd li div{
+    color: #9a2e1f;
+    font-size: 23px;
+}
+.goods .bd li div span{
+    font-size: 17px;
+    margin-right: 5px;
+}
+.goods .bd li p{
+    position: absolute;
+    left: 17px;
+    top:18px;
+    width: 28px;
+    height: 51px;
+    border:1px solid #27ba9b;
+    border-radius: 5px;
+    color: #27ba9b;
+    font-weight: 400;
+    line-height: 24px;
+}
+.goods .bd ul li a .hot{
+    color: #999;
+    font-size: 16px;
+}
+/*热门品牌*/
+.brand>.hd>span{
+    width: 30px;
+    height: 30px;
+}
+.brand .hd a{
+    display: inline-block;
+    float: right;
+    margin-top: 78px;
+    margin-right: 12px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/sprites.png");
+}
+.brand .hd .left{
+    background-position:7px -68px ;
+    background-color: #dcdcdc;
+}
+.brand .hd .right{
+    background-position:-32px -68px ;
+    background-color: #27ba9b;
+}
+.brand .bd ul li{
+    float: left;
+    width: 242px;
+    height: 305px;
+    margin-right: 7px;
+    background-color: #333333;
+}
+.brand .bd ul li:last-child{
+    margin-right: 0px;
+}
+.brand .bd ul li a img{
+    width: 242px;
+}
+
+/*生鲜 服饰*/
+.shengxian .hd,
+.clothes .hd,
+.kitchen .hd,
+.home .hd,
+.topic .hd{
+    height: 96px;
+    line-height: 96px;
+}
+
+.shengxian .hd h2,
+.clothes .hd h2,
+.kitchen .hd h2,
+.home .hd h2 ,
+.topic .hd h2{
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.shengxian .hd .more,
+.clothes .hd .more,
+.kitchen .hd .more,
+.home .hd .more,
+.topic .hd .more{
+    float: right;
+}
+.shengxian .hd ul,
+.clothes .hd ul,
+.kitchen .hd ul,
+.home .hd ul{
+    float: right;
+    margin-right: 65px;
+}
+.shengxian .hd ul li,
+.clothes .hd ul li,
+.kitchen .hd ul li,
+.home .hd ul li{
+    float: left;
+}
+.shengxian .hd ul li a{
+    padding: 0 7px;
+    margin: 6px;
+}
+.shengxian .hd ul li a:hover{
+    background-color: #27ba9b;
+    transition: all .3s;
+}
+.shengxian .bd .left,
+.clothes .bd .left,
+.kitchen .bd .left,
+.home .bd .left{
+    float: left;
+    width: 240px;
+    height: 610px;
+    margin-right: 20px;
+    background-color: pink;
+    box-sizing: border-box;
+}
+.shengxian .bd .left a img,
+.clothes .bd .left a img,
+.kitchen .bd .left a img,
+.home .bd .left a img{
+    width:240px ;
+}
+.shengxian .bd .right li,
+.clothes .bd .right li,
+.kitchen .bd .right li,
+.home .bd .right li{
+    float: left;
+    width: 242px;
+	height: 304px;
+    margin-right: 2px;
+}
+.shengxian .bd .right li:nth-child(4n),
+.clothes .bd .right li:nth-child(4n),
+.kitchen .bd .right li:nth-child(4n),
+.home .bd .right li:nth-child(4n){
+    margin-right: 0px;
+}
+
+.shengxian .bd .right li a img,
+.clothes .bd .right li a img,
+.kitchen .bd .right li a img,
+.home .bd .right li a img{
+    width: 242px;
+    height: 191px;
+}
+.shengxian .bd .right li a span,
+.clothes .bd .right li a span,
+.kitchen .bd .right li a span,
+.home .bd .right li a span{
+    font-size: 8px;
+}
+.shengxian .bd .right li p,
+.clothes .bd .right li p,
+.kitchen .bd .right li p,
+.home .bd .right li p{
+    font-size: 20px;
+    color: #9a2e1f;
+}
+.shengxian .bd .right li p span,
+.clothes .bd .right li p span,
+.kitchen .bd .right li p span,
+.home .bd .right li p span{
+    font-size: 13px !important;
+    margin-right:3px;
+}
+.topic ul li{
+    position: relative;
+    float: left;
+    width: 400px;
+    height: 355px;
+    margin-right: 20px;
+}
+.topic ul li:last-child{
+    margin-right: 0;
+}
+.topic ul li img{
+    width: 400px;
+}
+.topic ul li .heart,
+.topic ul li .look{
+    float: left;
+    margin-top: 20px;
+    width:20px;
+    height: 20px;
+    background-image: url("../images/sprites.png");
+}
+.topic ul li span{
+    float: left;
+    margin-top: 18px;
+    margin-right: 25px;
+}
+.topic ul li .heart{
+    background-position: -120px -108px;
+}
+.topic ul li .look{
+    background-position: -159px -107px;
+}
+
+.topic ul li h3{
+    position: absolute;
+    top:220px;
+    color: white;
+}
+.topic ul li h4{
+    position: absolute;
+    top:250px;
+    color: #dcdcdc;
+    font-size: 15px;
+}
+.topic ul li .ban{
+    position: absolute;
+    width: 400px;
+    top:215px;
+    height:68px;
+    background-color: rgba(0,0,0,.3);
+}
+
+
